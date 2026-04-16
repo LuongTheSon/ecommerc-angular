@@ -18,7 +18,7 @@ yarn-error.log
 .c9/
 *.launch
 .settings/
-*.sublime-workspace
+*.sublime-workspacex
 
 # Visual Studio Code
 .vscode/*
@@ -41,3 +41,5 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+.env
