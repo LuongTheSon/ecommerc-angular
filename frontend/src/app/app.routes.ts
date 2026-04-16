@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
+import { canCheckoutGuard } from './guards/can-checkout.guard';
 
 export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'products/all', // default route
+    redirectTo: 'products/all',
   },
   // setting Routes
   {
@@ -25,6 +26,7 @@ export const routes: Routes = [
   },
   {
     path: 'checkout',
+    canActivate: [canCheckoutGuard],
     loadComponent: () => import('./pages/checkout/checkout'),
   },
   {

@@ -42,11 +42,12 @@ import { RouterLink } from '@angular/router';
         <span class="text-2xl text-gray-500 font-bold"> \${{ product().price }}</span>
         <button
           matButton="filled"
-          class="flex items-center gap-2"
+          class="flex items-center gap-1"
           (click)="store.addToCart(product())"
+          [disabled]="!product().inStock"
         >
-          <mat-icon>shopping_cart</mat-icon>
-          Add to Cart
+          <mat-icon class="small">shopping_cart</mat-icon>
+          {{ product().inStock ? 'Thêm vào giỏ hàng' : 'Hết hàng' }}
         </button>
       </div>
     </div>
